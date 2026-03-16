@@ -1,0 +1,24 @@
+:root {
+    --space_xs: 0.25rem;
+    --space_sm: 0.5rem;
+    --space_md: 1rem;
+    --space_lg: 1.5rem;
+    --space_xl: 2rem;
+    --space_2xl: 3rem;
+    --space_3xl: 4rem;
+    --space_4xl: 6rem;
+    --space_5xl: 8rem;
+    --space_6xl: 10rem;
+    --font-size_sm: 0.875rem;
+    --font-size_md: 1rem;
+    --font-size_lg: 1.25rem;
+    --font-size_xl: 1.5rem;
+    --font-size_xl-int: 1.75rem;
+    --font-size_2xl: 2rem;
+    --font-size_2xl-int: 2.5rem;
+    --font-size_3xl: 3rem;
+    --font-size_4xl: 4rem;
+    --font-size_sectitle: 8rem;
+    --font-size_maxtitle: 12.5rem; 
+
+}
