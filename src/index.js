@@ -1,1 +1,10 @@
 export {default as Heading} from './components/elements/Heading.jsx';
+export {default as Paragraph} from './components/elements/Paragraph.jsx';
+export {default as Image} from './components/elements/Image.jsx';
+export {default as Link} from './components/elements/Link.jsx';
+export {default as Section} from './components/layouts/Section.jsx';
+export {default as Container} from './components/layouts/container.jsx';
+export {default as GridContainer} from './components/layouts/grid.jsx';
+export {default as GridItem } from './components/layouts/GridItem.jsx';
+import './styles/global.css';
+import './styles/tokens.css';

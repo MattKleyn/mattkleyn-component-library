@@ -1,24 +1,199 @@
-:root {
-    --space_xs: 0.25rem;
-    --space_sm: 0.5rem;
-    --space_md: 1rem;
-    --space_lg: 1.5rem;
-    --space_xl: 2rem;
-    --space_2xl: 3rem;
-    --space_3xl: 4rem;
-    --space_4xl: 6rem;
-    --space_5xl: 8rem;
-    --space_6xl: 10rem;
-    --font-size_sm: 0.875rem;
-    --font-size_md: 1rem;
-    --font-size_lg: 1.25rem;
-    --font-size_xl: 1.5rem;
-    --font-size_xl-int: 1.75rem;
-    --font-size_2xl: 2rem;
-    --font-size_2xl-int: 2.5rem;
-    --font-size_3xl: 3rem;
-    --font-size_4xl: 4rem;
-    --font-size_sectitle: 8rem;
-    --font-size_maxtitle: 12.5rem; 
+/*───────────────────────────────────────────────
+  CLASS NAMING CONVENTIONS
+────────────────────────────────────────────────*/
 
+/*
+  Base classes
+  - Root classes for primitives and layout components.
+  - Examples: .grid, .container, .section
+*/
+
+/*
+  BEM modifiers (semantic variants)
+  - Format: .component--modifier
+  - Examples: .section--xl, .container--column, .grid--12
+  - Rules:
+      1. Must describe meaningful semantic variations.
+      2. Must be scoped to the component.
+      3. Must NOT duplicate utilities or encode layout.
+*/
+
+/*
+  Utility classes (context-agnostic)
+  - Format: utility-name-value (kebab case)
+  - Examples: max-width-xl, pad-lg, flex-row
+  - Reusable across all components and sections.
+*/
+
+/*
+  Compound classes (combo classes)
+  - Format: .section_name (underscore)
+  - Examples: .section_hero, .grid_mobile
+  - Context-specific bundles for sections or components.
+*/
+
+:root {
+  /*──────────────────────────────
+    SPACING SCALE
+  ──────────────────────────────*/
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+  --space-6xl: 10rem;
+
+  /*──────────────────────────────
+    TYPOGRAPHY SCALE
+  ──────────────────────────────*/
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xl-int: 1.75rem;
+  --font-size-2xl: 2rem;
+  --font-size-2xl-int: 2.5rem;
+  --font-size-3xl: 3rem;
+  --font-size-4xl: 4rem;
+  --font-size-sectitle: 8rem;
+  --font-size-maxtitle: 12.5rem;
+
+  /*──────────────────────────────
+    MAX WIDTHS
+  ──────────────────────────────*/
+  --max-width-full: 100%;
+  --max-width-xl: 1440px;
+  --max-width-lg: 1200px;
+  --max-width-md: 960px;
+  --max-width-sm: 720px;
+
+  /*──────────────────────────────
+    COLORS (placeholder)
+  ──────────────────────────────*/
+  --color-text: #111;
+  --color-bg: #fff;
+  --color-accent: #0070f3;
+}
+
+
+/*──────────────────────────────
+  SPACING UTILITIES
+──────────────────────────────*/
+.pad-none { padding: 0; }
+.pad-xs { padding: var(--space-xs); }
+.pad-sm { padding: var(--space-sm); }
+.pad-md { padding: var(--space-md); }
+.pad-lg { padding: var(--space-lg); }
+.pad-xl { padding: var(--space-xl); }
+
+.margin-none { margin: 0; }
+.margin-xs { margin: var(--space-xs); }
+.margin-sm { margin: var(--space-sm); }
+.margin-md { margin: var(--space-md); }
+.margin-lg { margin: var(--space-lg); }
+.margin-xl { margin: var(--space-xl); }
+
+/*──────────────────────────────
+  FLEX UTILITIES
+──────────────────────────────*/
+.flex-row { display: flex; flex-direction: row; }
+.flex-column { display: flex; flex-direction: column; }
+.flex-center { display: flex; justify-content: center; align-items: center; }
+.flex-between { display: flex; justify-content: space-between; }
+.flex-start { display: flex; justify-content: flex-start; }
+.flex-end { display: flex; justify-content: flex-end; }
+
+/*──────────────────────────────
+  WIDTH UTILITIES
+──────────────────────────────*/
+.max-width-full { max-width: var(--max-width-full); }
+.max-width-xl { max-width: var(--max-width-xl); }
+.max-width-lg { max-width: var(--max-width-lg); }
+.max-width-md { max-width: var(--max-width-md); }
+.max-width-sm { max-width: var(--max-width-sm); }
+
+/*──────────────────────────────
+  GAP UTILITIES
+──────────────────────────────*/
+.gap-xs { gap: var(--space-xs); }
+.gap-sm { gap: var(--space-sm); }
+.gap-md { gap: var(--space-md); }
+.gap-lg { gap: var(--space-lg); }
+.gap-xl { gap: var(--space-xl); }
+
+/*──────────────────────────────
+  TEXT UTILITIES
+──────────────────────────────*/
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.font-size-xs { font-size: var(--font-size-sm); }
+.font-size-sm { font-size: var(--font-size-sm); }
+.font-size-md { font-size: var(--font-size-md); }
+.font-size-lg { font-size: var(--font-size-lg); }
+.font-size-xl { font-size: var(--font-size-xl); }
+
+/*──────────────────────────────
+  DISPLAY UTILITIES
+──────────────────────────────*/
+.display-flex { display: flex; }
+.display-grid { display: grid; }
+.display-block { display: block; }
+.display-inline { display: inline; }
+
+/*
+.grid-item {};
+.container {};
+.section {};
+.paragraph {};
+.image {};
+.image--default {};
+.image--icon {};
+.image--fit {};
+.image--cover {};
+.link {};
+.link--default {};
+*/
+
+.heading--h1 {
+    font-size: var(--font-size-maxtitle);
+    line-height: calc(var(--font-size-maxtitle) * 1.2);
+}
+.heading--h2 {
+    font-size: var(--font-size-3xl);
+    line-height: calc(var(--font-size-3xl) * 1.2);
+}
+.heading--h3 {
+    font-size: var(--font-size-3xl);
+    line-height: calc(var(--font-size-3xl) * 1.2);
+}
+.heading--h4 {
+    font-size: var(--font-size-2xl-int);
+    line-height: calc(var(--font-size-2xl-int) * 1.2);
+}
+.heading--h5 {
+    font-size: var(--font-size-xl-int);
+    line-height: calc(var(--font-size-xl-int) * 1.2);
+}
+.heading--h6 {
+    font-size: var(--font-size-xl);
+    line-height: calc(var(--font-size-xl) * 1.2);
+}
+
+.paragraph--sm { 
+    font-size: var(--font-size-sm);
+    line-height: calc(var(--font-size-sm) * 1.6);
+}
+.paragraph--md { 
+    font-size: var(--font-size-md);
+    line-height: calc(var(--font-size-md) * 1.6);
+}
+.paragraph--lg { 
+    font-size: var(--font-size-lg);
+    line-height: calc(var(--font-size-lg) * 1.6);
 }

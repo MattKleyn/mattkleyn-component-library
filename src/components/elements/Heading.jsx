@@ -1,6 +1,6 @@
-function Heading({level = "h1", children, ...props}) {
+function Heading({level = "h1", className='', children, ...props}) {
     const Tag = level;
-    return <Tag className={`heading-${level}`} {...props}>
+    return <Tag className={`heading--${level} ${className}`} {...props}>
         {children}
     </Tag>
 }

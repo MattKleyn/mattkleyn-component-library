@@ -13,7 +13,7 @@ function Image({
       alt={alt}
       loading={loading}
       decoding={decoding}
-      className={`image image-${variant} ${className}`}
+      className={`image image--${variant} ${className}`}
       {...props}
     />
   );
