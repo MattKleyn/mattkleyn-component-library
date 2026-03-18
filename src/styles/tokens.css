@@ -52,15 +52,15 @@
   ──────────────────────────────*/
   --font-size-sm: 0.875rem;
   --font-size-md: 1rem;
-  --font-size-lg: 1.25rem;
-  --font-size-xl: 1.5rem;
-  --font-size-xl-int: 1.75rem;
-  --font-size-2xl: 2rem;
-  --font-size-2xl-int: 2.5rem;
-  --font-size-3xl: 3rem;
+  --font-size-lg: clamp(1rem, 1.25vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 1.5vw, 1.5rem);
+  --font-size-xl-int: clamp(1.5rem, 1.75vw, 1.75rem);
+  --font-size-2xl: clamp(1.5rem, 2vw, 2rem);
+  --font-size-2xl-int: clamp(1.5rem, 2.5vw, 2.5rem);
+  --font-size-3xl: clamp(2.25rem, 3vw, 3rem);
   --font-size-4xl: 4rem;
-  --font-size-sectitle: 8rem;
-  --font-size-maxtitle: 12.5rem;
+  --font-size-sectitle: clamp(3rem, 8vw, 8rem);
+  --font-size-maxtitle: clamp(3rem, 10vw, 12rem);
 
   /*──────────────────────────────
     MAX WIDTHS
@@ -147,7 +147,7 @@
 .display-inline { display: inline; }
 
 /*
-.grid-item {};
+
 .container {};
 .section {};
 .paragraph {};
@@ -160,13 +160,24 @@
 .link--default {};
 */
 
+
+
+.grid-item {
+  grid-column: var(--grid-col);
+  grid-row: var(--grid-row);
+  /* grid-area: var(--grid-area); */
+}
+
 .heading--h1 {
     font-size: var(--font-size-maxtitle);
     line-height: calc(var(--font-size-maxtitle) * 1.2);
+    letter-spacing: -2px;
+    text-wrap-mode: nowrap;
+    
 }
 .heading--h2 {
-    font-size: var(--font-size-3xl);
-    line-height: calc(var(--font-size-3xl) * 1.2);
+    font-size: var(--font-size-sectitle);
+    line-height: calc(var(--font-size-sectitle) * 1.2);
 }
 .heading--h3 {
     font-size: var(--font-size-3xl);

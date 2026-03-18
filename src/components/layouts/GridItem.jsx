@@ -1,11 +1,12 @@
-function GridItem({as: Tag='div', col='auto', row='auto', area, className="", children, ...props }) {
+function GridItem({as: Tag='div', col, row, area, className="", children, ...props }) {
+  console.log("col:", col,"row:", row,"area:", area);
   return (
     <Tag
       className={`grid-item ${className}`}
       style={{
-        gridColumn: col,
-        gridRow: row,
-        gridArea: area,
+        "--grid-col": col,
+        "--grid-row": row,
+        "--grid-area": area,
       }}
       {...props}
     >
@@ -13,5 +14,6 @@ function GridItem({as: Tag='div', col='auto', row='auto', area, className="", ch
     </Tag>
   );
 }
+
 
 export default GridItem;
