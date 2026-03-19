@@ -1,7 +1,7 @@
 function GridContainer({
   as: Tag = "div",
   columns = "repeat(12, 1fr)",
-  rows='auto',
+  rows= "repeat(auto, 1fr)",
   gap = "lg",
   areas,
   className = "",
