@@ -89,6 +89,7 @@ img {
 ──────────────────────────────*/
 .max-width-full { max-width: var(--max-width-full); }
 .max-width-half { max-width: 50%;}
+.max-width-75rem { max-width: var(--space-75rem); }
 .max-width-xl { max-width: var(--max-width-xl); }
 .max-width-lg { max-width: var(--max-width-lg); }
 .max-width-md { max-width: var(--max-width-md); }
@@ -209,3 +210,22 @@ need align/justify items for container component
 .link {};
 .link--default {};
 */
+
+/*
+.nav-bar--dock {}
+
+.justify-left {}
+.justify-right {}
+.justify-center {}
+.justify-between {}
+.justify-around {}
+*/
+
+.nav_root {
+  justify-items: center;
+}
+
+.align-center {  justify-self: center;}
+.align-left {  justify-self: left;}
+.align-right {  justify-self: right;}
+.align-between { justify-content: space-between;}
