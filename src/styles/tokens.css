@@ -45,7 +45,6 @@
   --space-4xl: 6rem;
   --space-5xl: 8rem;
   --space-6xl: 10rem;
-  --space-75rem: 75rem;
 
   /*──────────────────────────────
     TYPOGRAPHY SCALE
@@ -66,6 +65,7 @@
     MAX WIDTHS
   ──────────────────────────────*/
   --max-width-full: 100%;
+  --max-width-half: 50%;
   --max-width-xl: 1440px;
   --max-width-lg: 1200px;
   --max-width-md: 960px;
@@ -78,4 +78,5 @@
   --color-text: #111;
   --color-bg: #fff;
   --color-accent: #0070f3;
+  --overlay-bg: #F2F2F2;
 }

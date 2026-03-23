@@ -1,7 +1,15 @@
-function NavOverlay() {
+function NavOverlay({
+    padding='md',
+    className='', 
+    children, 
+    ...props
+}) {
     return (
-        <div>
-
+        <div 
+        className={`nav-overlay pad-${padding} ${className}`} 
+        {...props}
+        >
+            {children}
         </div>
     )
 }

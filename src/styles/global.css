@@ -55,6 +55,15 @@ img {
   display: block;
 }
 
+/*NavToggle base style reset*/
+.nav_toggle {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*──────────────────────────────
   SPACING UTILITIES
 ──────────────────────────────*/
@@ -88,8 +97,7 @@ img {
   WIDTH UTILITIES
 ──────────────────────────────*/
 .max-width-full { max-width: var(--max-width-full); }
-.max-width-half { max-width: 50%;}
-.max-width-75rem { max-width: var(--space-75rem); }
+.max-width-half { max-width: var(--max-width-half);}
 .max-width-xl { max-width: var(--max-width-xl); }
 .max-width-lg { max-width: var(--max-width-lg); }
 .max-width-md { max-width: var(--max-width-md); }
@@ -139,7 +147,10 @@ img {
 /*──────────────────────────────
   IMAGE UTILITIES
 ──────────────────────────────*/
-.image--cover { object-fit: cover; background-color: #FAFAFA;}
+.image--cover { object-fit: cover;}
+.image--fill { object-fit: fill; }
+.image-contain { object-fit: contain; }
+.image--icon { object-fit: cover; }
 
 /*──────────────────────────────
   TYPOGRAPHY UTILITIES
@@ -149,7 +160,6 @@ img {
     line-height: calc(var(--font-size-maxtitle) * 1.2);
     letter-spacing: -2px;
     text-wrap-mode: nowrap;
-    
 }
 
 .heading--h2 {
@@ -195,37 +205,55 @@ img {
     letter-spacing: -1px;
 }
 
-
-
-/*
-need align/justify items for container component
-.container {};
-.section {};
-.paragraph {};
-.image {};
-.image--default {};
-.image--icon {};
-.image--fit {};
-.image--cover {};
-.link {};
-.link--default {};
-*/
-
-/*
-.nav-bar--dock {}
-
-.justify-left {}
-.justify-right {}
-.justify-center {}
-.justify-between {}
-.justify-around {}
-*/
-
+/*──────────────────────────────
+  NAV BASE STYLES
+──────────────────────────────*/
 .nav_root {
   justify-items: center;
+  position: relative;
 }
 
-.align-center {  justify-self: center;}
+.nav-bar--dock-left {
+  position: absolute;
+  inset-inline-start: 1rem;
+  inset-block-start: 1rem;
+}
+.nav-bar--dock-right {
+  position: absolute;
+  inset-inline-end: 1rem;
+  inset-block-start: 1rem;
+}
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* for now */
+  display: block;
+  background: var(--overlay-bg, transparent);
+  pointer-events: auto;
+}
+
+/*need to decide whether containers will accept both align and justify props
+OR will have none
+IF both then need to decide whether will have two add props for items and content values
+OR a conditional within the prop 
+OR a double prop perhaps? ie justify-${items}-${left}, align-${content}-${betwen}*/
+.align-jic {  justify-items: center;}/*this work on non flex containrt*/
+.align-jcc {  justify-content: center;}
+.align-jca {  justify-content: space-around;}
+.align-jcb {  justify-content: space-between;}
+/*justify content has no efect on contents if container is not flex or grid or grid column*/
+/*need to test justify differences in flex container*/
+
+.align-aic {  align-items: center;} /*works on flex container*/
+.align-acc {  align-content: center;} /* align content doe NOT work on flex container*/
+.align-aca {  align-content: space-around;}
+.align-acb {  align-content: space-between;}
+
+
+/* align-center {  justify-self: center;} */
 .align-left {  justify-self: left;}
 .align-right {  justify-self: right;}
 .align-between { justify-content: space-between;}

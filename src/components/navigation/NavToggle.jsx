@@ -1,8 +1,16 @@
-function NavToggle() {
+function NavToggle({
+    className='', 
+    children, 
+    ...props
+}) {
     return(
-        <div>
-            
-        </div>
+        <button 
+        type='button'
+        className={`nav_toggle ${className}`} 
+        {...props}
+        >
+            {children}
+        </button>
     )
 }
 

@@ -2,7 +2,7 @@ function Image({
   src = "",
   alt = "",
   className = "",
-  variant = "default",
+  variant,
   loading = "lazy",
   decoding = "async",
   ...props

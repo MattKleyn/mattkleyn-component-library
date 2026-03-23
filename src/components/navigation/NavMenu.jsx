@@ -2,7 +2,6 @@ function NavMenu({
     direction,
     gap='md',
     padding,
-    align,
     className,
     children,
      ...props
@@ -13,7 +12,6 @@ function NavMenu({
             flex-${direction} 
             gap-${gap} 
             pad-${padding} 
-            align-${align} 
             ${className}
             `} 
             {...props}
