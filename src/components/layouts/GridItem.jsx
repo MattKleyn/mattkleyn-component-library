@@ -1,5 +1,12 @@
-function GridItem({as: Tag='div', col, row, area, className="", children, ...props }) {
-  console.log("col:", col,"row:", row,"area:", area);
+function GridItem({
+  as: Tag='div', 
+  col, 
+  row, 
+  area, 
+  className="", 
+  children, 
+  ...props 
+}) {
   return (
     <Tag
       className={`grid-item ${className}`}

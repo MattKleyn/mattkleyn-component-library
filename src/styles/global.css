@@ -235,6 +235,8 @@ img {
   pointer-events: auto;
 }
 
+.background_overlay { height: 100%;}
+
 /*need to decide whether containers will accept both align and justify props
 OR will have none
 IF both then need to decide whether will have two add props for items and content values
