@@ -3,6 +3,7 @@ export {default as Paragraph} from './components/elements/Paragraph.jsx';
 export {default as Image} from './components/elements/Image.jsx';
 export {default as ImageWrapper} from './components/elements/ImageWrapper.jsx';
 export {default as Link} from './components/elements/Link.jsx';
+export {default as Button} from './components/elements/Button.jsx';
 export {default as Section} from './components/layouts/Section.jsx';
 export {default as Container} from './components/layouts/container.jsx';
 export {default as GridContainer} from './components/layouts/grid.jsx';
