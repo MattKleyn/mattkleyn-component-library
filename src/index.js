@@ -14,5 +14,6 @@ export {default as NavMenu} from './components/navigation/NavMenu.jsx';
 export {default as NavOverlay} from './components/navigation/NavOverlay.jsx';
 export {default as NavToggle} from './components/navigation/NavToggle.jsx';
 export {default as BackgroundOverlay} from './components/elements/BackgroundOverlay.jsx';
+export {default as Portal} from "./components/layouts/Portal.jsx";
 import './styles/global.css';
 import './styles/tokens.css';
