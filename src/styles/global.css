@@ -177,26 +177,31 @@ img {
 .heading--h2 {
     font-size: var(--font-size-sectitle);
     line-height: calc(var(--font-size-sectitle) * 1.2);
+    font-weight: 400;
 }
 
 .heading--h3 {
     font-size: var(--font-size-3xl);
     line-height: calc(var(--font-size-3xl) * 1.2);
+    font-weight: 400;
 }
 
 .heading--h4 {
     font-size: var(--font-size-2xl-int);
     line-height: calc(var(--font-size-2xl-int) * 1.2);
+    font-weight: 400;
 }
 
 .heading--h5 {
     font-size: var(--font-size-xl-int);
     line-height: calc(var(--font-size-xl-int) * 1.2);
+    font-weight: 400;
 }
 
 .heading--h6 {
     font-size: var(--font-size-xl);
     line-height: calc(var(--font-size-xl) * 1.2);
+    font-weight: 400;
 }
 
 .paragraph--sm { 
@@ -249,25 +254,24 @@ img {
 
 .background_overlay { height: 100%;}
 
-/*need to decide whether containers will accept both align and justify props
-OR will have none
-IF both then need to decide whether will have two add props for items and content values
-OR a conditional within the prop 
-OR a double prop perhaps? ie justify-${items}-${left}, align-${content}-${betwen}*/
-.align-jic {  justify-items: center;}/*this work on non flex containrt*/
-.align-jcc {  justify-content: center;}
-.align-jca {  justify-content: space-around;}
-.align-jcb {  justify-content: space-between;}
-/*justify content has no efect on contents if container is not flex or grid or grid column*/
-/*need to test justify differences in flex container*/
+/*──────────────────────────────
+  MODAL BASE STYLES
+──────────────────────────────*/
+.modal_backdrop {
+  background-color: rgba(0,0,0,0.8);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
 
-.align-aic {  align-items: center;} /*works on flex container*/
-.align-acc {  align-content: center;} /* align content doe NOT work on flex container*/
-.align-aca {  align-content: space-around;}
-.align-acb {  align-content: space-between;}
-
-
-/* align-center {  justify-self: center;} */
-.align-left {  justify-self: left;}
-.align-right {  justify-self: right;}
-.align-between { justify-content: space-between;}
+.modal_content_container {
+  position: relative;
+  z-index: 1001;
+  overflow: auto;
+  background-color: white;
+}

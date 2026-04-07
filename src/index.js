@@ -7,6 +7,7 @@ export {default as Button} from './components/elements/Button.jsx';
 export {default as Section} from './components/layouts/Section.jsx';
 export {default as Container} from './components/layouts/container.jsx';
 export {default as GridContainer} from './components/layouts/grid.jsx';
+export {default as ModalRoot} from './components/layouts/ModalRoot.jsx';
 export {default as GridItem } from './components/layouts/GridItem.jsx';
 export {default as NavRoot} from './components/navigation/NavRoot.jsx';
 export {default as NavBar} from './components/navigation/NavBar.jsx';

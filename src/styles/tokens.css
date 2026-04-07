@@ -58,7 +58,7 @@
   --font-size-2xl-int: clamp(1.5rem, 2.5vw, 2.5rem);
   --font-size-3xl: clamp(2.25rem, 3vw, 3rem);
   --font-size-4xl: 4rem;
-  --font-size-sectitle: clamp(3rem, 8vw, 8rem);
+  --font-size-sectitle: clamp(3rem, 10vw, 10rem);
   --font-size-maxtitle: clamp(3rem, 10vw, 12rem);
 
   /*──────────────────────────────
