@@ -153,15 +153,29 @@ img {
 /*──────────────────────────────
   IMAGE UTILITIES
 ──────────────────────────────*/
-.image--cover { object-fit: cover;}
-.image--fill { object-fit: fill; }
-.image-contain { object-fit: contain; }
-.image--icon { object-fit: cover; }
+.image--cover { 
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  inset: 0;
+}
+.image--fill { 
+  object-fit: fill; 
+}
+.image-contain { 
+  object-fit: contain; 
+}
+.image--icon { 
+  object-fit: cover; 
+}
 
 .image_wrapper {
-  width: 100%;
-  max-width: 100%;   
-  display: flex;
+  position: relative; 
+  height: 100%;
+  width: 100%; 
+  max-width: 100%;
+  overflow: hidden;  
 }
 
 /*──────────────────────────────
