@@ -62,6 +62,7 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 
 .button {
@@ -171,7 +172,8 @@ img {
 }
 
 .image_wrapper {
-  position: relative; 
+  position: relative;
+  z-index: -1;
   height: 100%;
   width: 100%; 
   max-width: 100%;
@@ -248,11 +250,16 @@ img {
   position: absolute;
   inset-inline-start: 1rem;
   inset-block-start: 1rem;
+  /* width: auto to collapse container to dock correctly */
+  width: auto;
 }
 .nav-bar--dock-right {
   position: absolute;
   inset-inline-end: 1rem;
   inset-block-start: 1rem;
+  justify-self: right;
+  /* width: auto to collapse container to dock correctly */
+  width: auto;
 }
 
 .nav-overlay {

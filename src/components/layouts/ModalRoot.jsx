@@ -10,12 +10,12 @@ function ModalRoot({
     ...props
 }) {
     if (!isOpen) return null;
-    console.log(isOpen);
+    console.log("isopen",isOpen);
 
     //close with escape key
     useEffect(() => {
         function handleKeyDown(e) {
-            console.log(e);
+            console.log("e", e);
             if (e.key == "Escape") {
                 onClose?.();
             }
