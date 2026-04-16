@@ -296,3 +296,72 @@ img {
   overflow: auto;
   background-color: white;
 }
+
+/*──────────────────────────────
+  PILL BASE STYLES
+──────────────────────────────*/
+.pill {
+  background-color: lightgray;
+  border: 1px solid grey;
+  border-radius: 2rem;
+  padding-inline: var(--space-lg);
+  padding-block: var(--space-sm);
+}
+
+/*──────────────────────────────
+  LIST BASE STYLES
+──────────────────────────────*/
+.list {
+  font-size: inherit;
+}
+
+/*──────────────────────────────
+  QUOTE BASE STYLES
+──────────────────────────────*/
+.pullquote.pullquote {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 1%;
+  color: darkslategray;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  quotes: auto;
+  padding-block: 3.5rem;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+}
+
+.quoteblock {
+  font-size: inherit;
+  font-weight: 500;
+  letter-spacing: 0.5%;
+  color: black;
+}
+
+.quote_cite {
+  color: grey;
+  font-size: smaller;
+}
+
+.inline-quote {
+  color: inherit;
+}
+
+/*──────────────────────────────
+  CALLOUT BASE STYLES
+──────────────────────────────*/
+.callout {
+  border: 1px solid black;
+  background-color: lightgray;
+  padding-inline: 3rem;
+  padding-block: 3rem;
+}
+
+.callout--warning {
+  border: 1px solid maroon;
+  background-color: lightcoral;
+  padding-inline: 3rem;
+  padding-block: 3rem;
+}
