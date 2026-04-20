@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Button({
     as: Tag='button', 
     type, 

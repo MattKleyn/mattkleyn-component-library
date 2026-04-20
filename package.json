@@ -1,5 +1,5 @@
 {
-  "name": "mattkleyn-component-library",
+  "name": "@mattkleyn/component-library",
   "version": "0.1.3",
   "main": "dist/index.cjs",
   "module": "dist/index.js",

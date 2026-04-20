@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Section({
     as: Tag = 'section', 
     className='', 

@@ -1,3 +1,5 @@
+import React from 'react';
+
 function NavMenu({
     direction,
     gap='md',

@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Pill({
     as: Tag="p",
     children,

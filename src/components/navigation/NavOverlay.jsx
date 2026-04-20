@@ -1,3 +1,5 @@
+import React from 'react';
+
 function NavOverlay({
     padding='md',
     className='', 

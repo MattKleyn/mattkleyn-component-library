@@ -1,5 +1,5 @@
 import Portal from '../layouts/Portal';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 function ModalRoot({
     isOpen,

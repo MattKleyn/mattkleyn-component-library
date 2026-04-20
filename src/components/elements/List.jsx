@@ -1,3 +1,5 @@
+import React from 'react';
+
 function List({
     as: Tag='ul',
     items = [],

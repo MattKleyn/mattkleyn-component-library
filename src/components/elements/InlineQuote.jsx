@@ -1,3 +1,5 @@
+import React from 'react';
+
 function InlineQuote({ children, className = '', ...props }) {
   return (
     <q className={`inline-quote ${className}`} {...props}>

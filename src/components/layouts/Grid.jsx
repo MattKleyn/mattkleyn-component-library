@@ -1,3 +1,5 @@
+import React from 'react';
+
 function GridContainer({
   as: Tag = "div",
   columns = "repeat(12, 1fr)",
