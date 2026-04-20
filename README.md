@@ -1,12 +1,27 @@
-#mattkleyn React component library
+# MattKleyn React Component Library
 
-#Overview
-This component library was originally just part of my portfolio redesign, but after a few system design decisions I realized I could design the components in a way that would give me maximum flexibility resutling in cross project use cases. I separated the portfolio and components into two separate projects, where I now have a component system that can be utilized on any future projects, and then I also have my portfolio that can be changed with relative ease later on when I decide to go from minimalist swiss design to maximalist brutalist design. 
+** This library is under active development.**
+** APIs may change until version 1.0.0. **
 
-#Installation and usage
-I will likely publish as an npm module as this matures, however for now, you will need to clone the repo. Once you have the cloned repo, you can either npm link to another repo and bundle after development, or create a new directory within the cloned repo and build in there while imorting the modules per usual.
+## Background
+This component library was originally just part of my portfolio redesign, but after a few system design decisions I realized I could design the components in a way that would give me maximum flexibility resutling in cross project use cases.
 
-#License
+## Overview
+This is a lightweight, non-opinionated React component library built for personal use. The primitives were designed to be context agnostic and flexible across use cases.  
+
+Currently the logic is written in Javascript, I do have plans to migrate to Typescript over the next few months of development. Afterwhich im aiming to release more stable versions.
+
+## Installation and usage
+Install just like any other npm module, in your terminal run:
+    npm install @mattkleyn/component-library
+
+Look at the index.js file in the source code for the list of available imports. To import components, at the top of your jsx file, eg:
+    import { Container, Pill, Heading, Portal } from '@mattkleyn/component-library';
+
+As an example of using this component library in context, see my portfolio repo so see how you can use the components.
+    https://github.com/MattKleyn/Portfolio-V2
+
+## License
 This repo is open source and can be used for personal projects, give it a star if you like it. 
 
 Not for commercial use. 

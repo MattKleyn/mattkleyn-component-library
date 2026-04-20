@@ -1,17 +1,26 @@
 {
   "name": "mattkleyn-component-library",
-  "version": "1.0.0",
-  "main": "src/index.js",
+  "version": "0.1.0",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "type": "module",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": ">=18",
+    "react-dom": ">=18"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup src/index.js --format esm,cjs --external react,react-dom"
   },
   "keywords": [],
   "author": "matthew_kleynhans",
   "license": "ISC",
-  "description": "A pesonal React design system and component library built by Matthew Kleynhans. This library includes a collection of reusable UI components and design tokens that can be used to create consistent and visually appealing user interfaces in React applications."
+  "description": "A pesonal React design system and component library built by Matthew Kleynhans. This library includes a collection of reusable UI components and design tokens that can be used to create consistent and visually appealing user interfaces in React applications.",
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3"
+  }
 }
