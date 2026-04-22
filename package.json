@@ -15,7 +15,21 @@
   "scripts": {
     "build": "tsup src/index.js --format esm,cjs --external react,react-dom"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "react-components",
+    "component-library",
+    "ui-library",
+    "ui-components",
+    "frontend",
+    "javascript",
+    "react-ui",
+    "layout",
+    "typography",
+    "open-source",
+    "mattkleyn",
+    "matthew-kleynhans"
+  ],
   "author": "matthew_kleynhans",
   "license": "ISC",
   "description": "A pesonal React design system and component library built by Matthew Kleynhans. This library includes a collection of reusable UI components and design tokens that can be used to create consistent and visually appealing user interfaces in React applications.",

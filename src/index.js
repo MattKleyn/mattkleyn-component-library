@@ -2,6 +2,7 @@ export {default as Heading} from './components/elements/Heading.jsx';
 export {default as Paragraph} from './components/elements/Paragraph.jsx';
 export {default as Image} from './components/elements/Image.jsx';
 export {default as ImageWrapper} from './components/elements/ImageWrapper.jsx';
+export {default as Media} from './components/layouts/Media.jsx';
 export {default as Link} from './components/elements/Link.jsx';
 export {default as Button} from './components/elements/Button.jsx';
 export {default as Pill} from './components/elements/Pill.jsx';
