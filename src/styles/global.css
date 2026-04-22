@@ -163,12 +163,18 @@ img {
 }
 .image--fill { 
   object-fit: fill; 
+  width: 100%;
+  height: 100%;
 }
-.image-contain { 
+.image--contain { 
   object-fit: contain; 
+  width: 100%;
+  height: 100%;
 }
 .image--icon { 
-  object-fit: cover; 
+  object-fit: contain; 
+  width: 100%;
+  height: 100%;
 }
 
 .image_wrapper {
@@ -186,56 +192,56 @@ img {
 .heading--h1 {
     font-size: var(--font-size-maxtitle);
     line-height: calc(var(--font-size-maxtitle) * 1.2);
-    letter-spacing: -2px;
+    letter-spacing: var(--kerning-xs);
     text-wrap-mode: nowrap;
 }
 
 .heading--h2 {
     font-size: var(--font-size-sectitle);
     line-height: calc(var(--font-size-sectitle) * 1.2);
-    font-weight: 400;
+    font-weight: var(--font-weight-md);
 }
 
 .heading--h3 {
     font-size: var(--font-size-3xl);
     line-height: calc(var(--font-size-3xl) * 1.2);
-    font-weight: 400;
+    font-weight: var(--font-weight-md);
 }
 
 .heading--h4 {
     font-size: var(--font-size-2xl-int);
     line-height: calc(var(--font-size-2xl-int) * 1.2);
-    font-weight: 400;
+    font-weight: var(--font-weight-md);
 }
 
 .heading--h5 {
     font-size: var(--font-size-xl-int);
     line-height: calc(var(--font-size-xl-int) * 1.2);
-    font-weight: 400;
+    font-weight: var(--font-weight-md);
 }
 
 .heading--h6 {
     font-size: var(--font-size-xl);
     line-height: calc(var(--font-size-xl) * 1.2);
-    font-weight: 400;
+    font-weight: var(--font-weight-md);
 }
 
 .paragraph--sm { 
     font-size: var(--font-size-sm);
     line-height: calc(var(--font-size-sm) * 1.6);
-    letter-spacing: -1px;
+    letter-spacing: var(--kerning-sm);
 }
 
 .paragraph--md { 
     font-size: var(--font-size-md);
     line-height: calc(var(--font-size-md) * 1.6);
-    letter-spacing: -1px;
+    letter-spacing: var(--kerning-sm);
 }
 
 .paragraph--lg { 
     font-size: var(--font-size-lg);
     line-height: calc(var(--font-size-lg) * 1.6);
-    letter-spacing: -1px;
+    letter-spacing: var(--kerning-sm);
 }
 
 /*──────────────────────────────
@@ -248,15 +254,15 @@ img {
 
 .nav-bar--dock-left {
   position: absolute;
-  inset-inline-start: 1rem;
-  inset-block-start: 1rem;
+  inset-inline-start: var(--space-md);
+  inset-block-start: var(--space-md);
   /* width: auto to collapse container to dock correctly */
   width: auto;
 }
 .nav-bar--dock-right {
   position: absolute;
-  inset-inline-end: 1rem;
-  inset-block-start: 1rem;
+  inset-inline-end: var(--space-md);
+  inset-block-start: var(--space-md);
   justify-self: right;
   /* width: auto to collapse container to dock correctly */
   width: auto;
@@ -269,7 +275,7 @@ img {
   height: 100%;
   overflow: auto; /* for now */
   display: block;
-  background: var(--overlay-bg, transparent);
+  background: var(--color-light, transparent);
   pointer-events: auto;
 }
 
@@ -279,7 +285,7 @@ img {
   MODAL BASE STYLES
 ──────────────────────────────*/
 .modal_backdrop {
-  background-color: rgba(0,0,0,0.8);
+  background-color: var(--overlay-dark--80);
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -294,18 +300,19 @@ img {
   position: relative;
   z-index: 1001;
   overflow: auto;
-  background-color: white;
+  background-color: var(--color-white);
 }
 
 /*──────────────────────────────
   PILL BASE STYLES
 ──────────────────────────────*/
 .pill {
-  background-color: lightgray;
-  border: 1px solid grey;
-  border-radius: 2rem;
+  background-color: var(--color-light);
+  border: 1px solid var(--color-neutral);
+  border-radius: var(--border-radius-lg);
   padding-inline: var(--space-lg);
   padding-block: var(--space-sm);
+  height: fit-content;
 }
 
 /*──────────────────────────────
@@ -319,49 +326,58 @@ img {
   QUOTE BASE STYLES
 ──────────────────────────────*/
 .pullquote.pullquote {
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 1%;
-  color: darkslategray;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-md);
+  line-height: calc(var(--font-size-2xl) * 1.2);
+  letter-spacing: var(--kerning-sm);
+  color: var(--color-dark);
   width: 100%;
   max-width: 700px;
   text-align: center;
   quotes: auto;
-  padding-block: 3.5rem;
-  border-top: 1px solid lightgrey;
-  border-bottom: 1px solid lightgrey;
+  padding-block: var(--space-2xl);
+  border-top: 1px solid var(--color-neutral);
+  border-bottom: 1px solid var(--color-neutral);
 }
 
 .quoteblock {
   font-size: inherit;
-  font-weight: 500;
-  letter-spacing: 0.5%;
-  color: black;
+  font-weight: var(--font-weight-md);
+  letter-spacing: var(--kerning-lg);
 }
 
 .quote_cite {
-  color: grey;
-  font-size: smaller;
+  color: var(--color-dark);
+  font-size: var(--font-size-sm);
 }
 
 .inline-quote {
-  color: inherit;
+  font-weight: var(--font-weight-md);
+  letter-spacing: var(--kerning-lg);
 }
 
 /*──────────────────────────────
   CALLOUT BASE STYLES
 ──────────────────────────────*/
 .callout {
-  border: 1px solid black;
-  background-color: lightgray;
-  padding-inline: 3rem;
-  padding-block: 3rem;
+  padding-inline: var(--space-2xl);
+  padding-block: var(--space-2xl);
+}
+
+.callout--default {
+  border: 1px solid var(--color-dark);
+  background-color: var(--color-light);
+  color: var(--color-dark);
 }
 
 .callout--warning {
-  border: 1px solid maroon;
-  background-color: lightcoral;
-  padding-inline: 3rem;
-  padding-block: 3rem;
+  border: 1px solid var(--color-warning--dark);
+  background-color: var(--color-warning--light);
+  color: var(--color-warning--dark);
+}
+
+.callout--info {
+  border: 1px solid var(--color-info--dark);
+  background-color: var(--color-info--light);
+  color: var(--color-info--dark);
 }

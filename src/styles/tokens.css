@@ -62,6 +62,20 @@
   --font-size-maxtitle: clamp(3rem, 10vw, 12rem);
 
   /*──────────────────────────────
+    TYPOGRAPHY PROPERTIES
+  ──────────────────────────────*/
+  --kerning-xs: -2%;
+  --kerning-sm: -1%;
+  --kerning-none: 0%;
+  --kerning-lg: 1%;
+  --kerning-xl: 2%;
+
+  --font-weight-light: 300;
+  --font-weight-reg: 400;
+  --font-weight-md: 500;
+  --font-weight-sb: 600;
+
+  /*──────────────────────────────
     MAX WIDTHS
   ──────────────────────────────*/
   --max-width-full: 100%;
@@ -75,8 +89,26 @@
   /*──────────────────────────────
     COLORS 
   ──────────────────────────────*/
-  --color-text: #111;
-  --color-bg: #fff;
+  --color-black: #111;
+  --color-white: #fff;
+  --color-light: #F2F2F2;
+  --color-neutral: #C5C5C5;
+  --color-dark: #464646;
+
+  --overlay-dark--80: rgba(0,0,0,0.8);
+  
+  --color-warning--dark: maroon;
+  --color-warning--light: lightcoral;
+  --color-info--dark: #403F32;
+  --color-info--light: #fffcc9;
   --color-accent: #0070f3;
-  --overlay-bg: #F2F2F2;
+
+/*──────────────────────────────
+    SPACING SCALE
+  ──────────────────────────────*/
+  --border-radius-sm: 0.5rem;
+  --border-radius-md: 1rem;
+  --border-radius-lg: 2rem;
+  --border-radius-elipse: 100%;
+
 }
