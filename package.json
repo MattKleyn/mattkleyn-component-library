@@ -11,7 +11,7 @@
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18",
-    "react-router-dom": "^6"
+    "react-router-dom": ">=6 <8"
   },
   "scripts": {
     "build": "tsup src/index.js --format esm,cjs --external react,react-dom,react-router-dom"
@@ -37,6 +37,6 @@
   "devDependencies": {
     "tsup": "^8.5.1",
     "typescript": "^6.0.3",
-    "react-router-dom": "^6"
+    "react-router-dom": ">=6 <8"
   }
 }
