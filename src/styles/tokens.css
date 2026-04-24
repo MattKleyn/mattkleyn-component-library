@@ -103,12 +103,46 @@
   --color-info--light: #fffcc9;
   --color-accent: #0070f3;
 
-/*──────────────────────────────
+  /*──────────────────────────────
     SPACING SCALE
   ──────────────────────────────*/
   --border-radius-sm: 0.5rem;
   --border-radius-md: 1rem;
   --border-radius-lg: 2rem;
   --border-radius-elipse: 100%;
+
+  /*──────────────────────────────
+    MOTION SCALE
+  ──────────────────────────────*/
+  --motion-duration-quick: 120ms;   
+  --motion-duration-standard: 180ms; 
+  --motion-duration-slow: 250ms;   
+
+  --motion-ease-standard: cubic-bezier(0.4, 0, 0.2, 1); 
+  --motion-ease-emphasized: cubic-bezier(0.4, 0, 0, 1); 
+  --motion-ease-decelerate: cubic-bezier(0, 0, 0.2, 1);
+  --motion-ease-accelerate: cubic-bezier(0.42, 0, 1, 1); 
+
+  --motion-scale-hover: 1.03;
+  --motion-scale-press: 0.97;
+  --motion-scale-focus: 1.01;
+
+  --motion-shadow-hover: 0 4px 12px rgba(0,0,0,0.15);
+  --motion-shadow-press: 0 2px 6px rgba(0,0,0,0.2);
+  --motion-shadow-focus: 0 0 0 3px rgba(0,120,255,0.5);
+
+  --motion-opacity-hover: 0.9;
+  --motion-opacity-press: 0.8;
+  --motion-opacity-disabled: 0.5;
+
+  --motion-translate-sm: 4px;
+  --motion-translate-md: 12px;
+  --motion-translate-lg: 24px;
+
+  --motion-spring-stiffness: 220;
+  --motion-spring-damping: 26;
+  --motion-spring-mass: 1;
+
+
 
 }

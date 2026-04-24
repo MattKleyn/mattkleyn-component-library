@@ -304,6 +304,38 @@ img {
 }
 
 /*──────────────────────────────
+  BUTTON BASE STYLES
+──────────────────────────────*/
+.button {
+  transition:     
+    transform var(--motion-duration-quick) var(--motion-ease-standard),
+    box-shadow var(--motion-duration-quick) var(--motion-ease-standard)
+}
+
+.button:hover {
+  transition-timing-function: var(--motion-ease-standard);
+  transform: scale(var(--motion-scale-hover));
+  box-shadow: var(--motion-shadow-hover);
+}
+
+.button:active {
+  transition-timing-function: var(--motion-ease-emphasized);
+  transform: scale(var(--motion-scale-press));
+  box-shadow: var(--motion-shadow-press);
+}
+
+.button:focus-visible {
+  transform: scale(var(--motion-scale-focus));
+  box-shadow: var(--motion-shadow-focus);
+}
+
+/*──────────────────────────────
+  LINK BASE STYLES
+──────────────────────────────*/
+
+
+
+/*──────────────────────────────
   PILL BASE STYLES
 ──────────────────────────────*/
 .pill {
