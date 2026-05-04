@@ -137,10 +137,24 @@ img {
 /*──────────────────────────────
   DISPLAY UTILITIES
 ──────────────────────────────*/
-.display-flex { display: flex; }
-.display-grid { display: grid; }
-.display-block { display: block; }
-.display-inline { display: inline; }
+.display-flex { 
+  display: flex; 
+}
+
+.display-grid { 
+  display: grid; 
+  grid-template-columns: var(--grid-template-columns);
+  grid-template-rows: var(--grid-template-rows);
+  grid-template-areas: var(--grid-template-areas);
+}
+
+.display-block { 
+  display: block; 
+}
+
+.display-inline { 
+  display: inline; 
+}
 
 /*──────────────────────────────
   GRID UTILITIES
@@ -309,7 +323,7 @@ img {
 .button {
   transition:     
     transform var(--motion-duration-quick) var(--motion-ease-standard),
-    box-shadow var(--motion-duration-quick) var(--motion-ease-standard)
+    box-shadow var(--motion-duration-quick) var(--motion-ease-standard);
 }
 
 .button:hover {
